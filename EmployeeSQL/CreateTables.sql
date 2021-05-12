@@ -26,7 +26,7 @@ create table employee
 
 create table salary
 (
-    emp_no int,
+    emp_no int primary key,
     salary numeric(10, 2),
     constraint fk_employee
         foreign key (emp_no)
