@@ -15,3 +15,9 @@ SELECT d.dept_no, d.dept_name, e.emp_no, e.last_name, e.first_name
 FROM dept_manager m
     JOIN employee e on m.emp_no = e.emp_no
     JOIN department d on d.dept_no = m.dept_no;
+
+-- 4. List the department of each employee with the following information: employee number, last name, first name, and department name.
+SELECT e.emp_no, e.last_name, e.first_name, d.dept_name
+FROM dept_emp de
+    JOIN employee e on de.emp_no = e.emp_no
+    JOIN department d on d.dept_no = de.dept_no;
